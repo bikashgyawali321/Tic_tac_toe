@@ -45,7 +45,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   bool _checkWinner(int row, int col) {
-    // Check if any move has been made on the board
     if (!_board.any((row) => row.any((cell) => cell.isNotEmpty))) {
       return false;
     }
@@ -94,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 Navigator.pop(context);
                 setState(() {
-                  _initBoard(); // Call _initBoard to reset the board
+                  _initBoard();
                 });
               },
               child: const Text('Play Again'),
